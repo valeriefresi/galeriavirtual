@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+</head>
+
+<script>
+
+    AFRAME.registerComponent('redirect', {
+  
+      schema: {
+        href: {default: ''}
+      },
+  
+      init: function() {
+        var data = this.data;
+        var el = this.el; 
+  
+         // react to the click
+         this.el.addEventListener('click', function () {
+           // navigate to another url
+           window.location = data.href;
+         })
+      }
+    });
+  
+  </script>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <img id="skyTexture" src="assets/sky_galeria.JPG">
+
+      <img id="dibujo1" src="assets/dibujo 1.jpg">
+      <img id="dibujo2" src="assets/dibujo angel.png">
+      <img id="dibujo3" src="assets/dibujo bodegon.png">
+      <img id="dibujo4" src="assets/dibujo cuerpo.jpg">
+      <img id="dibujo5" src="assets/dibujo mamá.png">
+
+      <img id="pintura1" src="assets/pintura bn.png">
+      <img id="pintura2" src="assets/pintura morado.png">
+      <img id="pintura3" src="assets/pintura perfil.png">
+      <img id="pintura4" src="assets/pintura retrato.jpg">
+      <img id="pintura5" src="assets/pintura vidrio.png">
+    </a-assets>
+
+    <a-sky src="#skyTexture"></a-sky>
+
+    <a-plane src="#dibujo2" position="10 -5 -25" rotation="-30 -30 0" width="7" height="10.79" repeat="1 1"
+    scale=" 1 1 1"
+    redirect="href: https://shorturl.at/aiC1j"
+    animation__position="property: object3D.position.y; to: -4.7; dir: alternate; dur: 2000; loop: true"
+    animation__mouseenter="property: scale; to: 1.15 1.15 1.15; dur: 300; startEvents: mouseenter"
+    animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"></a-plane>
+
+    <a-plane src="#dibujo4" position="0 0 -12" rotation="0 0 0" width="7" height="10.5" repeat="1 1"
+    scale="1 1 1"
+    redirect="href:https://www.instagram.com/p/C6E-pg6PvMD/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    animation__position="property: object3D.position.y; to: -0.3; dir: alternate; dur: 2000; loop: true"
+    animation__mouseenter="property: scale; to: 1.15 1.15 1.15; dur: 300; startEvents: mouseenter"
+    animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"></a-plane>
+
+    <a-plane src="#dibujo1" position="-13 7 -18" rotation="30 40 0" width="7" height="9.8" repeat="1 1"
+    scale="1 1 1"
+    redirect="href:https://www.instagram.com/p/DLvpmBRyZGk/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    animation__position="property: object3D.position.y; to: 7.3; dir: alternate; dur: 2000; loop: true"
+    animation__mouseenter="property: scale; to: 1.15 1.15 1.15; dur: 300; startEvents: mouseenter"
+    animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"></a-plane>
+
+    <a-plane src="#dibujo5" position="35 7 -40" rotation="25 -60 0" width="18" height="21.3" repeat="1 1"
+    scale="1 1 1"
+    redirect="href: https://shorturl.at/H6Ifw"
+    animation__position="property: object3D.position.y; to: 6.7; dir: alternate; dur: 2000; loop: true"
+    animation__mouseenter="property: scale; to: 1.15 1.15 1.15; dur: 300; startEvents: mouseenter"
+    animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"></a-plane>
+
+    <a-plane src="#dibujo3" position="-20 -4 -48" rotation="-18 40 0" width="10" height="15.68" repeat="1 1"
+    scale="1 1 1"
+    redirect="href: https://shorturl.at/OJbKi"
+    animation__position="property: object3D.position.y; to: -3.7; dir: alternate; dur: 2000; loop: true"
+    animation__mouseenter="property: scale; to: 1.15 1.15 1.15; dur: 300; startEvents: mouseenter"
+    animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"></a-plane>
+
+    <a-plane src="#pintura1" position="25 -4 -5" rotation="-10 -90 0" width="14" height="11.07" repeat="1 1"
+    scale="1 1 1"
+    redirect="href:https://valerienayla02.wixsite.com/valerieartgalerie?pgid=jac9f1rs-881517e0-c560-465c-84de-8579eb78e7f7&fbclid=PAZXh0bgNhZW0CMTEAAafDURJjLYFj8gS9prvOU7UDWNwnje7EFlTxj1eVkyD9n-MByQfgu73ib65mEw_aem_BWEKG-1vTX1X3vweThjhtQ"
+    animation__position="property: object3D.position.y; to: -4.3; dir: alternate; dur: 2000; loop: true"
+    animation__mouseenter="property: scale; to: 1.15 1.15 1.15; dur: 300; startEvents: mouseenter"
+    animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"></a-plane>
+
+    <a-plane src="#pintura2" position="-30 -5 -5" rotation="-10 90 0" width="14" height="8.64" repeat="1 1"
+    scale="1 1 1"
+    redirect="href:https://valerienayla02.wixsite.com/valerieartgalerie?pgid=jac9f1rs-25befc31-31e7-4684-bc58-c7e228591734&fbclid=PAZXh0bgNhZW0CMTEAAafDURJjLYFj8gS9prvOU7UDWNwnje7EFlTxj1eVkyD9n-MByQfgu73ib65mEw_aem_BWEKG-1vTX1X3vweThjhtQ"
+    animation__position="property: object3D.position.y; to: -4.7; dir: alternate; dur: 2000; loop: true"
+    animation__mouseenter="property: scale; to: 1.15 1.15 1.15; dur: 300; startEvents: mouseenter"
+    animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"></a-plane>
+
+    <a-plane src="#pintura3" position="-30 0 15" rotation="0 130 0" width="7" height="9.91" repeat="1 1"
+    scale="1 1 1"
+    redirect="href:https://valerienayla02.wixsite.com/valerieartgalerie?pgid=jac9f1rs-185ba69b-08b5-4d22-8087-be0a085a9b1d&fbclid=PAZXh0bgNhZW0CMTEAAafDURJjLYFj8gS9prvOU7UDWNwnje7EFlTxj1eVkyD9n-MByQfgu73ib65mEw_aem_BWEKG-1vTX1X3vweThjhtQ"
+    animation__position="property: object3D.position.y; to: -0.3; dir: alternate; dur: 2000; loop: true"
+    animation__mouseenter="property: scale; to: 1.15 1.15 1.15; dur: 300; startEvents: mouseenter"
+    animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"></a-plane>
+
+    <a-plane src="#pintura4" position="-3 0 10" rotation="0 170 0" width="7" height="9.43" repeat="1 1"
+    scale="1 1 1"
+    redirect="href:https://www.instagram.com/p/DLvsJBZSVWT/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    animation__position="property: object3D.position.y; to: 0.3; dir: alternate; dur: 2000; loop: true"
+    animation__mouseenter="property: scale; to: 1.15 1.15 1.15; dur: 300; startEvents: mouseenter"
+    animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"></a-plane>
+
+    <a-plane src="#pintura5" position="15 5 20" rotation="10 230 0" width="10" height="13.23" repeat="1 1"
+    scale="1 1 1"
+    redirect="href:https://valerienayla02.wixsite.com/valerieartgalerie?pgid=jac9f1rs-ebd2baf0-d8f8-4f1c-82d3-e92232f50282&fbclid=PAZXh0bgNhZW0CMTEAAafDURJjLYFj8gS9prvOU7UDWNwnje7EFlTxj1eVkyD9n-MByQfgu73ib65mEw_aem_BWEKG-1vTX1X3vweThjhtQ"
+    animation__position="property: object3D.position.y; to: 4.7; dir: alternate; dur: 2000; loop: true"
+    animation__mouseenter="property: scale; to: 1.15 1.15 1.15; dur: 300; startEvents: mouseenter"
+    animation__mouseleave="property: scale; to: 1 1 1; dur: 300; startEvents: mouseleave"></a-plane>
+
+    <a-light type="point" intensity="1" position="0 5 -2"></a-light>
+
+    <a-camera>
+      <a-entity cursor="fuse: false; rayOrigin:mouse;" raycaster="objects:a-plane" position="0 0 0" >
+      </a-entity>
+    </a-camera>
+  </a-scene>
+
+</body>
+
+</html>
